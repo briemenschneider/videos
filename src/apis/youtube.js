@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const KEY = 'AIzaSyC_RwBMrw8GR8wdhJynaaJMOYl-kBrUadE';
+const yt = require('../secrets.json');
 
 export default axios.create({
     baseURL: 'https://www.googleapis.com/youtube/v3',
@@ -8,6 +8,6 @@ export default axios.create({
         part: 'snippet',
         type: 'video',
         maxResults: 5,
-        key: KEY
+        key: yt.KEY
     }
 });
